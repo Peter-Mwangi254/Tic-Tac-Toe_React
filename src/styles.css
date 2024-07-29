@@ -3,72 +3,33 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: Arial, sans-serif;
   margin: 20px;
   padding: 0;
+  background-color: #f0f0f0;
+  text-align: center;
 }
 
 h1 {
-  margin-top: 0;
-  font-size: 22px;
-}
-
-h2 {
-  margin-top: 0;
-  font-size: 20px;
-}
-
-h3 {
-  margin-top: 0;
-  font-size: 18px;
-}
-
-h4 {
-  margin-top: 0;
-  font-size: 16px;
-}
-
-h5 {
-  margin-top: 0;
-  font-size: 14px;
-}
-
-h6 {
-  margin-top: 0;
-  font-size: 12px;
-}
-
-code {
-  font-size: 1.2em;
-}
-
-ul {
-  padding-inline-start: 20px;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: sans-serif;
-  margin: 20px;
-  padding: 0;
+  font-size: 28px;
 }
 
 .square {
   background: #fff;
-  border: 1px solid #999;
+  border: 1px solid #333;
   float: left;
   font-size: 24px;
   font-weight: bold;
   line-height: 34px;
-  height: 34px;
-  margin-right: -1px;
-  margin-top: -1px;
+  height: 80px;
+  width: 80px;
   padding: 0;
   text-align: center;
-  width: 34px;
+  transition: background-color 0.3s;
+}
+
+.square:hover {
+  background-color: #f9f9f9;
 }
 
 .board-row:after {
@@ -79,12 +40,50 @@ body {
 
 .status {
   margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
 }
+
 .game {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-board {
+  margin-right: 20px;
 }
 
 .game-info {
-  margin-left: 20px;
+  text-align: left;
+}
+
+ol {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.symbol {
+  color: #333; 
+  font-size: 24px; 
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); 
 }

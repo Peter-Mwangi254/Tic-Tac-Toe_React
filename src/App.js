@@ -3,7 +3,7 @@ import { useState } from 'react';
 function Square({ value, onSquareClick }) {
   return (
     <button className="square" onClick={onSquareClick}>
-      {value}
+      <span className="symbol">{value}</span>
     </button>
   );
 }
@@ -68,6 +68,11 @@ export default function Game() {
     setCurrentMove(nextMove);
   }
 
+  function restartGame() {
+    setHistory([Array(9).fill(null)]);
+    setCurrentMove(0);
+  }
+
   const moves = history.map((squares, move) => {
     let description;
     if (move > 0) {
@@ -89,6 +94,7 @@ export default function Game() {
       </div>
       <div className="game-info">
         <ol>{moves}</ol>
+        <button onClick={restartGame}>Restart Game</button>
       </div>
     </div>
   );
